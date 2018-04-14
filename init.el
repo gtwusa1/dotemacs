@@ -45,4 +45,6 @@
 (use-package zenburn-theme
   :ensure t
   :init
-  (load-theme 'zenburn t))
+  (progn
+    (load-theme 'zenburn t)
+    (set-cursor-color "red")))
