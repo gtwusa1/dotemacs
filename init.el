@@ -1,3 +1,7 @@
+;; Don't run GC during startup
+(setq gc-cons-threshold 400000000)
+
+
 ;; Don't clutter my filesystem
 (setq backup-directory-alist
       `(("." . ,(concat user-emacs-directory "backups"))))
@@ -51,3 +55,6 @@
 
 ;;; Load the config
 (org-babel-load-file (concat user-emacs-directory "config.org"))
+
+;; Set GC back to modern level
+(setq gc-cons-threshold 1000000)
