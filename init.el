@@ -2,6 +2,10 @@
 (setq backup-directory-alist
       `(("." . ,(concat user-emacs-directory "backups"))))
 
+;; Move customization settings to their own file
+(setq custom-file "~/.emacs.d/custom.el")
+(load custom-file)
+
 ;; For MELPA
 (require 'package)
 (let* ((no-ssl (and (memq system-type '(windows-nt ms-dos))
