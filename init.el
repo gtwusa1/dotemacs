@@ -1,2 +1,2 @@
 (setq backup-directory-alist
-          `(("." . ,(concat user-emacs-directory "backups"))))
+      `(("." . ,(concat user-emacs-directory "backups"))))
