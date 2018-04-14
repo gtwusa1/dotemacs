@@ -32,3 +32,9 @@
 (use-package diminish :ensure t)
 (require 'diminish)                ;; if you use :diminish
 (require 'bind-key)                ;; if you use any :bind variant
+
+;; Set theme
+(use-package zenburn-theme
+  :ensure t
+  :init
+  (load-theme 'zenburn t))
