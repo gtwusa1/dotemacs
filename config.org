@@ -1,3 +1,8 @@
+
+* Packages
+
+Auto-install packages if not already present on the system.
+
 #+BEGIN_SRC emacs-lisp
-;
+  (setq use-package-always-ensure t)
 #+END_SRC
