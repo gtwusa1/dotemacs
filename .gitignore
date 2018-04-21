@@ -5,3 +5,4 @@ elpa/
 custom.el
 eshell/
 config.el
+private.*

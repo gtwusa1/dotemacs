@@ -1,4 +1,15 @@
 
+* First Things First
+** Load some /private/ settings
+
+If they exist...
+
+#+BEGIN_SRC emacs-lisp
+  (let ((my/private-file "~/.emacs.d/private.org"))
+    (if (file-exists-p my/private-file)
+        (org-babel-load-file my/private-file)))
+#+END_SRC
+
 * Packages
 
 Auto-install packages if not already present on the system.
