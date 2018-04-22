@@ -7,3 +7,4 @@ eshell/
 config.el
 private.*
 /smex-items
+/ido.last
