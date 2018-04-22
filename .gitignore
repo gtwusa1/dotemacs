@@ -6,3 +6,4 @@ custom.el
 eshell/
 config.el
 private.*
+/smex-items
