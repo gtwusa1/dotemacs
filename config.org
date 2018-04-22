@@ -60,7 +60,7 @@ A Git porcelain inside Emacs.
 
 #+BEGIN_SRC emacs-lisp
   (use-package magit
-    :bind ("C-x G" . magit-status))
+    :bind ("C-c G" . magit-status))
 
   ;; full screen magit-status
 
