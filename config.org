@@ -30,6 +30,16 @@ Auto-install packages if not already present on the system.
   (setq use-package-always-ensure t)
 #+END_SRC
 
+** company
+
+Modular text completion framework
+
+#+BEGIN_SRC emacs-lisp
+  (use-package company
+    :init
+    (add-hook 'after-init-hook 'global-company-mode))
+#+END_SRC
+
 ** ido-mode
 *** ido-vertical-mode
 #+BEGIN_SRC emacs-lisp
