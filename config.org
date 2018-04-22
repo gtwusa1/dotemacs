@@ -18,6 +18,30 @@ Auto-install packages if not already present on the system.
   (setq use-package-always-ensure t)
 #+END_SRC
 
+** ido-mode
+*** ido-vertical-mode
+#+BEGIN_SRC emacs-lisp
+  (use-package ido-vertical-mode
+    :init
+    (progn
+      (ido-mode 1)
+      (ido-vertical-mode 1)
+      (setq ido-vertical-define-keys 'C-n-and-C-p-only)))
+#+END_SRC
+
+*** flx-ido
+
+#+BEGIN_SRC emacs-lisp
+  (use-package flx-ido
+    :init
+    (progn
+      (ido-everywhere 1)
+      (flx-ido-mode 1)
+      ;; disable ido faces to see flx highlights.
+      (setq ido-enable-flex-matching t)
+      (setq ido-use-faces nil)))
+#+END_SRC
+
 ** magit
 
 A Git porcelain inside Emacs.
@@ -25,6 +49,22 @@ A Git porcelain inside Emacs.
 #+BEGIN_SRC emacs-lisp
   (use-package magit
     :bind ("C-x G" . magit-status))
+#+END_SRC
+
+** smex
+
+M-x interface with Ido-style fuzzy matching.
+
+#+BEGIN_SRC emacs-lisp
+  (use-package smex
+    :init
+    (progn
+      (smex-initialize)
+      (global-set-key (kbd "M-x") 'smex)
+      (global-set-key (kbd "M-X") 'smex-major-mode-commands)
+      ;; This is your old M-x.
+      (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)))
+
 #+END_SRC
 
 ** web-mode 
