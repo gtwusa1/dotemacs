@@ -30,6 +30,18 @@ Auto-install packages if not already present on the system.
   (setq use-package-always-ensure t)
 #+END_SRC
 
+** column-enforce-mode
+
+Highlight text that extends beyond a certain (100) column.
+
+#+BEGIN_SRC emacs-lisp
+  (use-package column-enforce-mode
+    :init
+    (progn
+      (add-hook 'prog-mode-hook 'column-enforce-mode)
+      (setq column-enforce-column 100)))
+#+END_SRC
+
 ** company
 
 Modular text completion framework
