@@ -52,6 +52,16 @@ Modular text completion framework
     (add-hook 'after-init-hook 'global-company-mode))
 #+END_SRC
 
+** expand-region
+
+Increase selected region by semantic units.
+
+#+BEGIN_SRC emacs-lisp
+  (use-package expand-region
+    :init
+    (global-set-key (kbd "C-=") 'er/expand-region))
+#+END_SRC
+
 ** ido-mode
 *** ido-vertical-mode
 #+BEGIN_SRC emacs-lisp
