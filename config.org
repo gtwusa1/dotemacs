@@ -10,6 +10,18 @@ If they exist...
         (org-babel-load-file my/private-file)))
 #+END_SRC
 
+
+* Themes
+
+Make text selection more obvious.
+
+#+BEGIN_SRC emacs-lisp
+  (set-face-attribute 'region nil
+                      :background "white smoke"
+                      :foreground "black"
+                      :weight 'bold)
+#+END_SRC
+
 * Packages
 
 Auto-install packages if not already present on the system.
