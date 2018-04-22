@@ -118,6 +118,18 @@ On-the-fly spelling checker.
   ;; }}
 #+END_SRC
 
+** highlight-indent-guides
+
+Minor modes for highlighting indentation
+
+#+BEGIN_SRC emacs-lisp :notangle
+  (use-package highlight-indent-guides
+    :init
+    (progn
+      (setq highlight-indent-guides-method 'column)
+      (add-hook 'prog-mode-hook 'highlight-indent-guides-mode)))
+#+END_SRC
+
 ** ido-mode
 *** ido-vertical-mode
 #+BEGIN_SRC emacs-lisp
